@@ -1,0 +1,311 @@
+html{
+    width: 100%;
+    height: 1500px;
+}
+
+.fixed-header {
+  position: fixed;
+  top:0; left:0;
+  width: 100%;
+}
+
+nav {
+  width: 100%;
+  height: 60px;
+  background: rgba(39,174,96,1);
+  z-index:10;
+  font-family: "HelveticaNeue";
+  font-weight: bold;
+}
+
+nav ul { 
+  list-style-type: none;
+  margin-left: 0%;
+  padding: 0;
+  text-align:right;
+  width: 100%;
+}
+
+nav ul li { 
+  display: block; 
+  line-height: 60px;
+  margin-left: 10px;
+}
+
+nav ul li a {
+  text-decoration: none; 
+  color: white;
+}
+
+ul.child{
+  display: none;
+  padding-right: 60px;
+  line-height: 0;
+  text-align: right;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li{
+  list-style: none;
+}
+
+ul.parent > li{
+  float: right;
+  width: 15%;
+  padding-left: 0px;
+  text-align: center;
+  background:rgba(39,174,96,1);
+  color:white;
+  cursor: pointer;
+}
+
+ul.parent > li > img{
+  padding-left: 5px;
+}
+
+.logo{
+    width: 500px;
+    height: 60px;
+}
+    
+.logo img{
+    padding: 10px 60px;
+}
+
+body{
+    background-color: white;
+}
+
+#chngloc{
+    float: right;
+    margin-right: 60px;
+    padding-top: 20px;
+    padding-left: 35px;
+    border: none;
+    background: rgba(39,174,96,1);
+    height: 60px;
+    width: 180px;
+    font-family: "HelveticaNeue";
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    text-decoration: none;
+    
+}
+
+.modal-container{
+    position: fixed;
+    background-color: white;
+    /border: 1px solid #000;
+    left: 50%;
+    border-radius: 5px;
+    padding: 20px;
+    width: 70%;
+    max-width: 150px;
+    
+    -webkit-transform: translate(-50%, -200%);
+    -ms-transform: translate(-50%, -200%);
+    transform: translate(-50%, -200%);
+    
+    -webkit-transition: -webkit-transform 200ms ease-out;
+    transition: transform 200ms ease-out;
+    
+}
+
+.modal:before{
+    content: "";
+    position: fixed;
+    display: none;
+    background: rgba(0,0,0,0.8);
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.modal:target:before{
+    display: block;
+}
+
+.modal:target .modal-container{
+    top: 20%;
+    -webkit-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+}
+
+#citylist{
+    text-align: center;
+    font-size: 20px;
+    text-decoration: 
+}
+.page{
+    width: 1400px;
+    background-color: white;
+    max-height: 100%;
+    margin: 0px auto;
+    margin-top: 60px;
+    box-shadow: 0px 0px 15px 1px rgba(0,0,0,0.4);
+    padding: 30px;
+    
+}
+
+.date_sel{
+    float: right;
+    margin-right: 60px;
+}
+
+.mov_sel{
+    float: right;
+    margin-right: 60px;
+    
+}
+
+#search{
+    float: right;
+    border-radius: 4px;
+    background-color: rgba(39,174,96,0.5);;
+    border: none;
+    color: black;
+    text-align: center;
+    font-size: 15px;
+    width: 90px;
+    height: 40px;
+    margin-top: 16px;
+}
+.seat_sel{
+    float: left;
+}
+
+.sel_title{
+    font-family: "HelveticaNeue";
+    font-weight: 600;
+    padding-bottom: 5px;
+}
+
+.mov{
+    width: 880px;
+}
+
+.line{
+    width: 100%;
+    height: 3px;
+    background-color: lightblue;
+    margin-top: 75px;
+}
+.seatno{
+    width: 50px;
+}
+
+input{
+    height: 25px;
+    border: 1px solid white;
+    background-color: rgba(0,0,0,0.1);
+    border-radius: 3px;
+}
+
+.moviepage{
+    width: 1020px;
+    max-height: 100%;
+    /border: 1px solid blue;
+    margin-top: 30px;
+}
+
+.movieblock{
+    width: 1020px;
+    height: 100px;
+    /border: 1px solid yellow;
+    padding: 0px 50px;
+    margin: 20px 0px;
+}
+
+.book1 {
+  border-radius: 4px;
+  background-color: rgba(39,174,96,0.5);;
+  border: none;
+  color: black;
+  text-align: center;
+  font-size: 15px;
+  float: right;
+  padding: 5px 10px;
+  height: 40px;
+  width: 90px;
+  margin: 35px 0px;
+  border-style: outset;
+}
+
+.book1:hover{
+    background-color: lightgray;
+}
+/*.book1 span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.book1 span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.book1:hover span {
+  padding-right: 20px;
+}
+
+.book1:hover span:after {
+  opacity: 10;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.book1:hover span {
+  padding-right: 25px;
+}
+
+.book1:hover span:after {
+  opacity: 1;
+  right: 0;
+}*/
+
+.movbox{
+    float: right;
+    /border: 1px solid blue;
+    width: 580px;
+    margin-right:35px;
+    height: 100px;
+}
+
+.mov_name{
+    padding: 5px 0px;
+    float: left;
+    font-family: "HelveticaNeue";
+    font-weight: bold;
+    /border: 1px solid;
+}
+
+.descript{
+    /border: 1px solid black;
+    width: 580px;
+    height: 70px;
+    float: left;
+    word-wrap: break-word;
+}
+
+.descript_text{
+    font-family: "HelveticaNeue";
+    font-weight: bold;
+}
+
+.divline{
+    border: 1px solid;
+}

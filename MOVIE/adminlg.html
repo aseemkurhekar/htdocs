@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="adminlg.css" type="text/css">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="adminlg.js"></script>
+</head>
+<body>
+<nav id="navigation">
+    <article class="logo">
+        <a href="index.php">
+        <img src="logo.png" width="283.2" height="60"></a>
+    </article>
+</nav>
+
+<div class="container">
+	<div id="lock">
+	</div>
+
+ <form name="login" onsubmit="return validateForm() ;" method="post" class="lgform">
+
+ <ul>
+ <li><input class="username" type="text" name="username" placeholder="Username" required>
+ </li>
+
+ <li><input class="password" type="password" name="password" placeholder="Password" required>
+ </li>
+ </ul>
+
+<input type="button" class="submit" value="Log In" name="submit" onclick="validate()">
+</form>
+</div>
+
+<script>
+var count= 2;
+function validate()
+{
+	var un = document.login.username.value;
+	var pw = document.login.password.value;
+	var valid = false;
+	var usernameArray = ["ACEadmin"];
+	var passwordArray = ["nimdaECA"];
+	for (var i = 0; i < usernameArray.length; i++)
+ {
+	if ((un == usernameArray[i]) && (pw == passwordArray[i]))
+	{
+		valid = true;
+		break;
+	}
+}
+	if (valid)
+	{
+		//alert("Login successful");
+		window.location = "admin.php";
+		return false;
+	}
+	var again = " tries";
+	if (count ==1)
+	{
+		again = " try"
+	}
+	if (count >= 1)
+	{
+		alert("Wrong Username or Password")
+		count--;
+	}
+	else
+	{
+		alert("Incorrect password or username you are now blocked");
+		document.login.username.value = "You are now Blocked";
+		document.login.password.value = "Fool you can't see this";
+		document.login.username.disabled = true;
+		document.login.password.disabled = true;
+		return false;
+	}
+}
+</script>
+
+
+</body>
+</html>

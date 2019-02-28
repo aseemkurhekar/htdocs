@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+	<link rel="stylesheet" href="pdf.css" type="text/css">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="pdf.js"></script>
+<script type="text/javascript" src="jquery.min.js"></script>
+<script type="text/javascript" src="qrcode.js"></script>
+</head>
+<body>
+	<nav id="navigation">
+	    <article class="logo">
+	        <a href="index.php">
+	        <img src="logo.png" width="283.2" height="60"></a>
+	    </article>
+	</nav>
+
+	<!-- 
+	content of this area will be the content of your PDF file 
+	-->
+	<div id="HTMLtoPDF">
+		<p>
+			Dear Name, <br>
+			Your tickets have been booked. <br><br>
+
+			<b>Movie Name </b>: Daddy<br>
+			<b>Date </b>: Date<br>
+			<b>Time </b>: Time<br>
+	</div>
+	<input id="text" type="text" value="http://jindo.dev.naver.com/collie" style="width:80%" /><br />
+<div id="qrcode" style="width:100px; height:100px; margin-top:15px;"></div>
+
+	<!-- here we call the function that makes PDF -->
+	<a href="#" onclick="myFunction()">Download PDF</a>
+
+	<!-- these js files are used for making PDF -->
+	
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="seats.css" type="text/css">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="seatjava.js"></script>
+</head>
+
+<body>
+		HelloWorld
+		<form action="book.php" method="post">
+			
+		
+		<input type="checkbox" name="a1" id="a1" class="css-checkbox">
+		<label for="a1" class="css-label"></label>
+		<input type="checkbox" name="a2" id="a2" class="css-checkbox">
+		<label for="a2" class="css-label"></label>
+		<input type="checkbox" name="a3" id="a3" class="css-checkbox">
+		<label for="a3" class="css-label"></label>
+		<button type="submit">Book</button>
+		</form>
+</body>
+
+
+<form action="trial.php" method="post">
+        <table>
+          
+          
+            <?php
+
+            $tabledisplay=$_SESSION['tabledsp'];
+            $allstudentresult = $conn->query("SELECT * FROM `{$tabledisplay}` ");
+            while($row=mysqli_fetch_array($allstudentresult,MYSQLI_ASSOC))
+            {
+              ?>
+              <tr>
+                <td><?php echo $row['userid']; ?></td>
+                <td><?php echo $row['fname']." ".$row['mname']." ".$row['lname']; ?></td>
+                
+                <td><input type="checkbox" name="<?php echo $row['userid']; ?>" id="<?php echo $row['userid']; ?>" class="css-checkbox" /><label for="<?php echo $row['userid']; ?>" class="css-label"></label></td>
+              </tr>
+              <?php
+            }
+
+            ?>
+          </tbody>
+        </table>
+        <ul>
+          <div class="submit">
+            <button type="submit" >SUBMIT</button>
+          </div>
+        </ul>
+        
+      </form>
+</html>

@@ -1,0 +1,159 @@
+html{
+    width: 100%;
+    height: 1500px;
+    font-family: "Helvetica";
+}
+
+.fixed-header {
+  position: fixed;
+  top:0; left:0;
+  width: 100%;
+}
+
+nav {
+  width: 100%;
+  height: 60px;
+  background: rgba(39,174,96,1);
+  z-index:10;
+  font-family: "HelveticaNeue";
+  font-weight: bold;
+}
+
+nav ul { 
+  list-style-type: none;
+  margin-left: 0%;
+  padding: 0;
+  text-align:right;
+  width: 100%;
+}
+
+nav ul li { 
+  display: block; 
+  line-height: 60px;
+  margin-left: 10px;
+}
+
+nav ul li a {
+  text-decoration: none; 
+  color: white;
+}
+
+ul.child{
+  display: none;
+  padding-right: 60px;
+  line-height: 0;
+  text-align: right;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li{
+  list-style: none;
+}
+
+ul.parent > li{
+  float: right;
+  width: 15%;
+  padding-left: 0px;
+  text-align: center;
+  background:rgba(39,174,96,1);
+  color:white;
+  cursor: pointer;
+}
+
+ul.parent > li > img{
+  padding-left: 5px;
+}
+
+.logo{
+    width: 500px;
+    height: 60px;
+}
+    
+.logo img{
+    padding: 10px 60px;
+}
+
+.admin{
+    margin: auto;
+    width: 1250px;
+    max-height: 100%;
+    /border: 1px solid;
+    margin-top: 60px;
+    padding-bottom: 60px;
+    box-shadow: 0 0 15px 5px rgba(0,0,0,0.5);
+    background-color: white;
+    margin-bottom: 60px;
+    padding: 30px;
+}
+
+.fields{
+    width: 400px;
+    height: 40px;
+    margin: 10px 50px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    font-size: 15px;
+    text-align: center;
+}
+
+#fdset{
+    border: 1px solid gray;
+    border-radius: 10px;
+    padding: 30px;
+    width: 500px;
+    margin: auto;
+    margin-top: 60px;
+}
+
+.submitbtn{
+    height: 40px;
+    width: 200px;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    margin-left: 150px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.submitbtn:hover{
+    background-color: rgb(37,174,96);
+}
+
+.adminpro{
+    position: relative;
+    top: 0;
+    left: 0;
+}
+.cover{
+    width: 100%;
+    height: 350px;
+    /border: 1px solid;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+#prphoto{
+    width: 150px;
+    height: 200px;
+    /border: 1px solid;
+    position: absolute;
+    top: 250px;
+    left: 70px;
+}
+
+.about{
+    margin-left: 250px
+}
+
+#wcad{
+  font-family: "Helvetica";
+  margin: 20px;
+  font-size: 50px; 
+}
